@@ -8,7 +8,6 @@ Extend `tabulate` module with prime print format.
 """
 
 import tabulate as tabulate_module
-
 from tabulate import DataRow, Line, TableFormat
 
 prime_format = TableFormat(
@@ -51,7 +50,7 @@ def tabulate_prime(tabular_data):
     lines[1] = lines[1][0:max_width]
 
     # remote the column after "+" sign
-    lines = [line[0:sign_idx-2] + line[sign_idx] + line[sign_idx+2:] for line in lines]
+    lines = [line[0:sign_idx - 2] + line[sign_idx] + line[sign_idx + 2:] for line in lines]
 
     output = "\n".join(lines)
     return output
