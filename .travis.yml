@@ -1,0 +1,23 @@
+language: python
+
+env:
+  global:
+    - PIP_DOWNLOAD_CACHE=$HOME/.pip-cache
+  matrix:
+    - TOXENV=pep8
+    - TOXENV=py27
+
+sudo: false
+
+cache:
+  - $HOME/.pip-cache
+
+install:
+  - pip install tox
+
+script:
+  - tox
+
+branches:
+  only:
+    - master
