@@ -20,7 +20,6 @@ class TestMain(unittest.TestCase):
  2 |  4""".lstrip("\n")
         self.assertEqual(PrimeTable.output(1), count_1_output)
 
-        return False
         count_10_output = """
    |  2   3   5   7  11  13  17  19  23  29
 ---+---------------------------------------

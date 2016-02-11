@@ -4,7 +4,7 @@ __all__ = ["PrimeGenerator", "NumLines"]
 
 from .prime_generator import PrimeGenerator
 from .num_lines import NumLines
-from .tabulate_ext import tabulate
+from .tabulate_ext import tabulate_prime
 
 
 class PrimeTable(object):
@@ -17,6 +17,10 @@ class PrimeTable(object):
     def output(cls, number):
         primes_numbers = cls.pg.generate_n_primes(number)
         lines = NumLines.generate(primes_numbers)
-        output = tabulate(lines, tablefmt="prime", headers="firstrow")
+        output = tabulate_prime(lines)
+
         print output
+        # tabulate's output don't meet the prime table format requirement, and the
+        # `tabulate` module has some hard code, so we modify the output string directly.
+
         return output
