@@ -40,6 +40,6 @@ class NumLines(object):
         # 2.1 fix the first column
         lines = [([nums[idx]] + line) for idx, line in enumerate(lines)]
         # 2.2 prepend the first row
-        lines.insert(0, [None] + nums)
+        lines.insert(0, [""] + nums)
 
         return lines

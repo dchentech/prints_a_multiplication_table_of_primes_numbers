@@ -14,6 +14,12 @@ class TestMain(unittest.TestCase):
         from prints_a_multiplication_table_of_primes_numbers import PrimeTable
         PrimeTable
 
+        count_1_output = """
+   |  2
+---+---
+ 2 |  4""".lstrip("\n")
+        self.assertEqual(PrimeTable.output(1), count_1_output)
+
         return False
         count_10_output = """
    |  2   3   5   7  11  13  17  19  23  29
@@ -27,8 +33,7 @@ class TestMain(unittest.TestCase):
 17 | 34  51  85 119 187 221 289 323 391 493
 19 | 38  57  95 133 209 247 323 361 437 551
 23 | 46  69 115 161 253 299 391 437 529 667
-29 | 58  87 145 203 319 377 493 551 667 841
-""".strip()
+29 | 58  87 145 203 319 377 493 551 667 841""".lstrip("\n")
         self.assertEqual(PrimeTable.output(10), count_10_output)
 
     def test_PrimeGenerator(self):
@@ -51,7 +56,7 @@ class TestMain(unittest.TestCase):
         from prints_a_multiplication_table_of_primes_numbers.num_lines import NumLines
 
         self.assertEqual(NumLines.generate([2, 3, 5, 7, 11]), [
-            [None, 2, 3, 5, 7, 11],
+            ["", 2, 3, 5, 7, 11],
             [2, 4, 6, 10, 14, 22],
             [3, 6, 9, 15, 21, 33],
             [5, 10, 15, 25, 35, 55],
@@ -59,7 +64,7 @@ class TestMain(unittest.TestCase):
             [11, 22, 33, 55, 77, 121]])
 
         self.assertEqual(NumLines.generate([2]), [
-            [None, 2],
+            ["", 2],
             [2, 4], ])
 
 
