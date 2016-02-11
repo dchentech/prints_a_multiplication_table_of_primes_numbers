@@ -12,6 +12,8 @@ class TestMain(unittest.TestCase):
 
     def test_main(self):
         # NOTE the blank index of result is a minor different to the requirement.
+        # If the requirement is confirmed to be very strict, then feel free to contact me,
+        # and I'll write a manual one.
         from prints_a_multiplication_table_of_primes_numbers import PrimeTable
 
         count_1_output = """

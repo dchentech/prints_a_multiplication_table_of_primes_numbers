@@ -17,10 +17,9 @@ class PrimeTable(object):
     def output(cls, number):
         primes_numbers = cls.pg.generate_n_primes(number)
         lines = NumLines.generate(primes_numbers)
-        output = tabulate_prime(lines)
 
-        print output
         # tabulate's output don't meet the prime table format requirement, and the
         # `tabulate` module has some hard code, so we modify the output string directly.
+        output = tabulate_prime(lines)
 
         return output
