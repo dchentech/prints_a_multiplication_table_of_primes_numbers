@@ -1,5 +1,5 @@
 # Coding challenge - prints a multiplication table of primes numbers
-[![Build Status](https://img.shields.io/travis/mvj3/prints_a_multiplication_table_of_primes_numbers/master.svg?style=flat)](https://travis-ci.org/mvj3/prints_a_multiplication_table_of_primes_numbers)
+[![Build Status](https://travis-ci.org/mvj3/prints_a_multiplication_table_of_primes_numbers.svg?branch=master)](https://travis-ci.org/mvj3/prints_a_multiplication_table_of_primes_numbers)
 
 ### Objective
 
