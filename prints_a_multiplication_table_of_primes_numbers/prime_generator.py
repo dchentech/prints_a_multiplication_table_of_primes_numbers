@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+__all__ = ["PrimeGenerator"]
+
 
 class PrimeGenerator(object):
     """
@@ -18,7 +20,9 @@ class PrimeGenerator(object):
         return self._primes_list[0:n]
 
     def find_next_prime(self):
-        """ find the next prime after the last number of `self._primes_list` """
+        """
+        find the next prime after the last number of `self._primes_list`
+        """
         last_num = self._primes_list[-1]
 
         while True:

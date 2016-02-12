@@ -26,7 +26,8 @@ orig_tabulate = tabulate_module.tabulate
 
 def tabulate_prime(tabular_data):
     """
-    This `tabulate` function only support prime table requirement, just as ETL stuffs.
+    This `tabulate` function only support prime table requirement,
+    just as ETL stuffs.
     """
     # treat the second column as normal values.
     tabular_data = [([row[0]] + ["|"] + row[1:]) for row in tabular_data]
@@ -50,7 +51,8 @@ def tabulate_prime(tabular_data):
     lines[1] = lines[1][0:max_width]
 
     # remote the column after "+" sign
-    lines = [line[0:sign_idx - 2] + line[sign_idx] + line[sign_idx + 2:] for line in lines]
+    lines = [line[0:sign_idx - 2] + line[sign_idx] + line[sign_idx + 2:]
+             for line in lines]
 
     output = "\n".join(lines)
     return output
