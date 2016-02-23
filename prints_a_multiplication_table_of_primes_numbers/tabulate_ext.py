@@ -26,7 +26,7 @@ orig_tabulate = tabulate_module.tabulate
 
 def tabulate_prime(tabular_data):
     """
-    This `tabulate` function only support prime table requirement,
+    This `tabulate_prime` function only support prime table requirement,
     just as ETL stuffs.
     """
     # treat the second column as normal values.
