@@ -12,7 +12,7 @@ class FibonacciGenerator(object):
     _fibonacci_list = [0, 1]  # 0 is placeholder
     skip_the_placeholder_idx = 1
 
-    def generate_n_fibonacci_numbers(self, n):
+    def generate(self, n):
         with_placehoder_len = n + 2
         while len(self._fibonacci_list) < with_placehoder_len:
             self._fibonacci_list.append(self.find_next_fibonacci())

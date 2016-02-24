@@ -12,7 +12,7 @@ class PrimeGenerator(object):
     # and 2 is the first prime number.
     _primes_list = [2]
 
-    def generate_n_primes(self, n):
+    def generate(self, n):
         """ n is the number that how many primes you want to generate. """
         while len(self._primes_list) < n:
             self._primes_list.append(self.find_next_prime())

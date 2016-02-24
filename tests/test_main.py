@@ -42,28 +42,28 @@ class TestMain(unittest.TestCase):
 
         pg = PrimeGenerator()
 
-        self.assertEqual(pg.generate_n_primes(1), [2])
-        self.assertEqual(pg.generate_n_primes(2), [2, 3])
-        self.assertEqual(pg.generate_n_primes(3), [2, 3, 5])
-        self.assertEqual(pg.generate_n_primes(4), [2, 3, 5, 7])
-        self.assertEqual(pg.generate_n_primes(5), [2, 3, 5, 7, 11])
-        self.assertEqual(pg.generate_n_primes(6), [2, 3, 5, 7, 11, 13])
-        self.assertEqual(pg.generate_n_primes(7), [2, 3, 5, 7, 11, 13, 17])
-        self.assertEqual(pg.generate_n_primes(8), [2, 3, 5, 7, 11, 13, 17, 19])
-        self.assertEqual(pg.generate_n_primes(9), [2, 3, 5, 7, 11, 13, 17, 19, 23])
-        self.assertEqual(pg.generate_n_primes(10), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
+        self.assertEqual(pg.generate(1), [2])
+        self.assertEqual(pg.generate(2), [2, 3])
+        self.assertEqual(pg.generate(3), [2, 3, 5])
+        self.assertEqual(pg.generate(4), [2, 3, 5, 7])
+        self.assertEqual(pg.generate(5), [2, 3, 5, 7, 11])
+        self.assertEqual(pg.generate(6), [2, 3, 5, 7, 11, 13])
+        self.assertEqual(pg.generate(7), [2, 3, 5, 7, 11, 13, 17])
+        self.assertEqual(pg.generate(8), [2, 3, 5, 7, 11, 13, 17, 19])
+        self.assertEqual(pg.generate(9), [2, 3, 5, 7, 11, 13, 17, 19, 23])
+        self.assertEqual(pg.generate(10), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
 
     def test_FibonacciGenerator(self):
         from prints_a_multiplication_table_of_primes_numbers.fibonacci_generator import FibonacciGenerator
 
         fg = FibonacciGenerator()
 
-        self.assertEqual(fg.generate_n_fibonacci_numbers(1), [1])
-        self.assertEqual(fg.generate_n_fibonacci_numbers(2), [1, 1])
-        self.assertEqual(fg.generate_n_fibonacci_numbers(3), [1, 1, 2])
-        self.assertEqual(fg.generate_n_fibonacci_numbers(4), [1, 1, 2, 3])
-        self.assertEqual(fg.generate_n_fibonacci_numbers(5), [1, 1, 2, 3, 5])
-        self.assertEqual(fg.generate_n_fibonacci_numbers(6), [1, 1, 2, 3, 5, 8])
+        self.assertEqual(fg.generate(1), [1])
+        self.assertEqual(fg.generate(2), [1, 1])
+        self.assertEqual(fg.generate(3), [1, 1, 2])
+        self.assertEqual(fg.generate(4), [1, 1, 2, 3])
+        self.assertEqual(fg.generate(5), [1, 1, 2, 3, 5])
+        self.assertEqual(fg.generate(6), [1, 1, 2, 3, 5, 8])
 
     def test_NumLines(self):
         from prints_a_multiplication_table_of_primes_numbers.num_lines import NumLines
