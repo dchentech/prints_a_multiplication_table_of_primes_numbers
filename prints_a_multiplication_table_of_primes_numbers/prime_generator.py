@@ -24,11 +24,12 @@ class PrimeGenerator(object):
         find the next prime after the last number of `self._primes_list`
         """
         last_num = self._primes_list[-1]
+        last_num += 1
 
         while True:
             is_prime = True
             for _num in self._primes_list:
-                if (last_num % _num) == 0 or last_num == _num:
+                if (last_num % _num) == 0:
                     is_prime = False
                     break
 

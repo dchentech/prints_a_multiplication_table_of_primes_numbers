@@ -53,6 +53,18 @@ class TestMain(unittest.TestCase):
         self.assertEqual(pg.generate_n_primes(9), [2, 3, 5, 7, 11, 13, 17, 19, 23])
         self.assertEqual(pg.generate_n_primes(10), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
 
+    def test_FibonacciGenerator(self):
+        from prints_a_multiplication_table_of_primes_numbers.fibonacci_generator import FibonacciGenerator
+
+        fg = FibonacciGenerator()
+
+        self.assertEqual(fg.generate_n_fibonacci_numbers(1), [1])
+        self.assertEqual(fg.generate_n_fibonacci_numbers(2), [1, 1])
+        self.assertEqual(fg.generate_n_fibonacci_numbers(3), [1, 1, 2])
+        self.assertEqual(fg.generate_n_fibonacci_numbers(4), [1, 1, 2, 3])
+        self.assertEqual(fg.generate_n_fibonacci_numbers(5), [1, 1, 2, 3, 5])
+        self.assertEqual(fg.generate_n_fibonacci_numbers(6), [1, 1, 2, 3, 5, 8])
+
     def test_NumLines(self):
         from prints_a_multiplication_table_of_primes_numbers.num_lines import NumLines
 
