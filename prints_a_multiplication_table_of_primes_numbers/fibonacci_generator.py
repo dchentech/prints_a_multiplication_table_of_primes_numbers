@@ -17,7 +17,7 @@ class FibonacciGenerator(object):
         while len(self._fibonacci_list) < with_placehoder_len:
             self._fibonacci_list.append(self.find_next_fibonacci())
 
-        return self._fibonacci_list[self.skip_the_placeholder_idx:n+1]
+        return self._fibonacci_list[self.skip_the_placeholder_idx: n + 1]
 
     def find_next_fibonacci(self):
         """
